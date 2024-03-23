@@ -1,2 +1,9 @@
 # thermal_printer
-the driver of thermal printer as a compontes of ESP-IDF
+driver of thermal printer 
+
+## Supported features
+
+- [x] moto driver
+- [x] print 
+- [ ] Out-of-paper detection
+- [ ] temperature sensor
