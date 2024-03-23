@@ -1,3 +1,4 @@
+# Description: 将图片转换为C语言的数组
 from PIL import Image
 import numpy as np
 img = Image.open('test.png')
