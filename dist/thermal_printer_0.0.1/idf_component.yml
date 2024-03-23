@@ -1,0 +1,4 @@
+description: This is a driver for thermal printer
+repository: git://github.com/atanisoft/esp_lcd_touch_xpt2046.git
+url: https://github.com/fengzhaoxin/thermal_printer
+version: 0.0.1
