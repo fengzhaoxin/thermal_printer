@@ -2,6 +2,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
+#include "printer_pins.h"
 #include "driver/spi_master.h"
 #include "driver/spi_common.h"
 #include "printer_heat.h"
@@ -44,9 +45,9 @@ void Heat_Gpio_Init(void)
 
 void Heat_Enable(uint8_t stb_num, uint16_t heat_time)
 {
-    gpio_set_level(stb_num, 1);
-    vTaskDelay(heat_time / portTICK_PERIOD_MS);
-    gpio_set_level(stb_num, 0);
+    gpio_set_level(stb_num, heat_time);
+    // vTaskDelay(heat_time / portTICK_PERIOD_MS);
+    // gpio_set_level(stb_num, 0);
 }
 
 void SPI_Init(void)

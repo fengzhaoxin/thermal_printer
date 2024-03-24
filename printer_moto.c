@@ -1,6 +1,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
+#include "printer_pins.h"
 #include "printer_moto.h"
 
 const uint8_t motorTable[][4] =
@@ -79,7 +80,7 @@ void Motor_Run_Circle(uint8_t times)
     for(int i = 0; i < times; i++)
     {
         Motor_Run(current_Motor);
-        vTaskDelay(20 / portTICK_PERIOD_MS);
+        vTaskDelay(MOTO_TIME / portTICK_PERIOD_MS);
         current_Motor++;
         if(current_Motor == 8)
         {
